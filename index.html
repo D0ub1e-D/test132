@@ -21,30 +21,30 @@ The apartment rent is predicted by apartment information published on the Intern
 		<p>Skewness value: it can be used to measure the asymmetry of probability distribution of random variables.</p>
 		<p>Kurtosis value: it can be used to measure the steepness of the probability distribution of random variables.</p>
 		<p>View the rent distribution curve and draw a curve distribution diagram and rent scatter diagram、</p>
-		<img src="https://pic.jitudisk.com/public/2022/12/08/2082b744e551e.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/2082b744e551e.png" alt="1.png" title="1.png" />
 		<p>First, observe the rent data. It can be seen that this data is in line with the normal distribution, but the skewness value is too large. We found a big tail. The "rent" value distribution has obvious skewness, so we will correct it later.</p>
 		
 		<p>(2) View the data histogram of each property of the apartment</p>
 		<p>Next, let's take a look at the impact of some important attributes on the results
 The histogram is used to show the data distribution. Generally speaking, it refers to which piece of data accounts for a high proportion or number of occurrences, and which piece has a low probability of occurrence. The following figure shows the occurrence of 18 attributes
 </p>
-		<img src="2.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/5dbb2d328b88d.png" alt="2.png" title="2.png" />
 		<p>Continuous variables include: community name (Cname), rent_quantity, total floors, position, subway_station, distance, rent, and the rest are discrete variables.</p>		
 		<p>(3) For discrete variables, we use boxplot to represent (box plot)
 Discrete variables include time, floor, space, state, bedroom_num, hall_num, toilet _num
 Rent_style, area, subway_line, decoration.
 </p>
 		<p>Box diagram of bedroom number and rent</p>
-		<img src="3.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/08c88f05ff5e1.png" alt="3.png" title="3.png" />
 		<p>Box diagram of living room number and rent</p>
-		<img src="4.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/2d906371c4a89.png" alt="4.png" title="4.png" />
 		<p>Box diagram of area and subway_line</p>
-		<img src="5.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/b9ecaff2d2f03.png" alt="5.png" title="5.png" />
 		<p>(4) Correlation analysis</p>
 		<p>Analyze the correlation degree between different factors affecting housing price and housing price, and analyze the correlation degree through the correlation graph.
 Qualitative and visual analysis of the correlation between different factors affecting housing price and housing price with bar chart
 </p>
-		<img src="6.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/1dffa8519c533.png" alt="6.png" title="6.png" />
 		<h4>Data cleaning</h4>
 		<p>Because the data may be incomplete, noisy, random, and have complex data structures, it is necessary to preliminarily sort out the data, clean the incomplete data, make preliminary description and analysis, select variables related to data mining, or change variables.</p>
 		
@@ -55,14 +55,14 @@ Qualitative and visual analysis of the correlation between different factors aff
 The apartment rent is predicted by apartment information published on the Internet, such as room layout, quantity, text description, photos, price, etc. The apartments are located in New York City.
 </p>
 		<p>(1)Outlier processing</p>
-		<img src="7.png" />
-		<img src="8.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/8ad3f3e6874a5.png" alt="7.png" title="7.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/21a684dbdd7cd.png" alt="8.png" title="8.png" />
 		<h4>Deviation correction</h4>
-		<img src="9.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/432a06bc060cc.png" alt="9.png" title="9.png" />
 		<p>Normal distribution transformation: the tail behind is too long, and it needs to be corrected (logarithmic transformation of data)</p>
-		<img src="10.png" />
-		<img src="11.png" />
-		<img src="12.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/0ef458bf19af7.png" alt="10.png" title="10.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/fc2481b41ed03.png" alt="11.png" title="11.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/f4e557c13620b.png" alt="12.png" title="12.png" />
 		<p>For attributes with too large missing data, you can choose to discard them, and for attribute data with small missing data, you can fill them:</p>
 		<p>(1) Delete the missing data (decoration situation, state, rent_style)</p>
 		<p>all_ data. drop(['decoration situation'], axis=1, inplace=True)</p>
@@ -80,7 +80,7 @@ The apartment rent is predicted by apartment information published on the Intern
 		<p>mode_ position = all_ data["position"].mode()</p>
 		<p>all_ data["area"] = all_ data["area"].fillna(int(mode_area))</p>
 		<p>all_ data["position"] = all_ data["position"].fillna(int(mode_position))</p>
-		<img src="13.png" />
+		<img src="https://pic.jitudisk.com/public/2022/12/08/e97944febd565.png" alt="13.png" title="13.png" />
 		<h4>Characteristic engineering</h4>
 		<p>Feature engineering refers to the process of transforming the original data into the training data of the model. Its purpose is to obtain better features of the training data and make the machine learning model approach this upper limit.
 Feature engineering can improve the performance of models, sometimes even on simple models.
